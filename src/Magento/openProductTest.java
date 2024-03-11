@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -69,10 +70,11 @@ public class openProductTest {
 		} else {
 			System.out.println("COLOR NOT EXIST");
 			System.out.println(randomNumber);
-
-			WebElement price = item.findElement(By.className("price"));
-			price.click();
-
+			
+			//Mouse hover On Item
+			Actions action = new Actions(driver);
+			action.moveToElement(item).perform();
+			
 			Thread.sleep(1000);
 			WebElement addToCartButton = item.findElement(By.tagName("Button"));
 			addToCartButton.click();
