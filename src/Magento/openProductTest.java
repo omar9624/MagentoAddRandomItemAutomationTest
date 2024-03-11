@@ -70,11 +70,11 @@ public class openProductTest {
 		} else {
 			System.out.println("COLOR NOT EXIST");
 			System.out.println(randomNumber);
-			
-			//Mouse hover On Item
+
+			// Mouse hover On Item
 			Actions action = new Actions(driver);
 			action.moveToElement(item).perform();
-			
+
 			Thread.sleep(1000);
 			WebElement addToCartButton = item.findElement(By.tagName("Button"));
 			addToCartButton.click();

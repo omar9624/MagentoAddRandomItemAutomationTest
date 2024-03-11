@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-11T15:44:57 EET" name="Default suite" finished-at="2024-03-11T15:45:50 EET" duration-ms="53209">
+  <suite started-at="2024-03-11T16:18:02 EET" name="Default suite" finished-at="2024-03-11T16:18:28 EET" duration-ms="25597">
     <groups>
     </groups>
-    <test started-at="2024-03-11T15:44:57 EET" name="Default test" finished-at="2024-03-11T15:45:50 EET" duration-ms="53209">
+    <test started-at="2024-03-11T16:18:02 EET" name="Default test" finished-at="2024-03-11T16:18:28 EET" duration-ms="25597">
       <class name="Magento.openProductTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Magento.openProductTest@35a9782c]" started-at="2024-03-11T15:44:57 EET" name="beforeTest" finished-at="2024-03-11T15:44:57 EET" duration-ms="140" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Magento.openProductTest@35a9782c]" started-at="2024-03-11T16:18:02 EET" name="beforeTest" finished-at="2024-03-11T16:18:02 EET" duration-ms="162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="openProduct()[pri:0, instance:Magento.openProductTest@35a9782c]" started-at="2024-03-11T15:44:57 EET" name="openProduct" finished-at="2024-03-11T15:45:19 EET" duration-ms="22324" status="PASS">
+        <test-method signature="openProduct()[pri:0, instance:Magento.openProductTest@35a9782c]" started-at="2024-03-11T16:18:02 EET" name="openProduct" finished-at="2024-03-11T16:18:13 EET" duration-ms="11036" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openProduct -->
-        <test-method signature="openProduct()[pri:0, instance:Magento.openProductTest@35a9782c]" started-at="2024-03-11T15:45:19 EET" name="openProduct" finished-at="2024-03-11T15:45:24 EET" duration-ms="5286" status="PASS">
+        <test-method signature="openProduct()[pri:0, instance:Magento.openProductTest@35a9782c]" started-at="2024-03-11T16:18:13 EET" name="openProduct" finished-at="2024-03-11T16:18:23 EET" duration-ms="9315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openProduct -->
-        <test-method signature="openProduct()[pri:0, instance:Magento.openProductTest@35a9782c]" started-at="2024-03-11T15:45:24 EET" name="openProduct" finished-at="2024-03-11T15:45:50 EET" duration-ms="25428" status="PASS">
+        <test-method signature="openProduct()[pri:0, instance:Magento.openProductTest@35a9782c]" started-at="2024-03-11T16:18:23 EET" name="openProduct" finished-at="2024-03-11T16:18:28 EET" duration-ms="5051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openProduct -->
