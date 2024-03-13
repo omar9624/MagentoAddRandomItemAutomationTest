@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class openProductTest {
+public class AddProductToCartTest {
 
 	String url = "https://magento.softwaretestingboard.com/";
 
@@ -25,7 +25,7 @@ public class openProductTest {
 
 	@Test(invocationCount = 3)
 
-	public void openProduct() throws InterruptedException {
+	public void AddToCartProduct() throws InterruptedException {
 
 		driver.get(url);
 		Thread.sleep(2000);
