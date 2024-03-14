@@ -6,7 +6,9 @@
       <class name="Magento.CheckoutProccessTest">
         <methods>
           <include name="checkoutProccess"/>
+          <include name="openProductAndAddToCart"/>
           <include name="beforeTest"/>
+          <include name="signUpProcess"/>
         </methods>
       </class> <!-- Magento.CheckoutProccessTest -->
     </classes>

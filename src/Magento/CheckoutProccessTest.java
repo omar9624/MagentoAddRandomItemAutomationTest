@@ -9,14 +9,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class CheckoutProccessTest {
 
 	String url = "https://magento.softwaretestingboard.com/";
-
+	String password = "Ooss_000";
 	WebDriver driver = new ChromeDriver();
+
+	Random random = new Random();
 
 	@BeforeTest
 	public void beforeTest() {
@@ -26,7 +29,9 @@ public class CheckoutProccessTest {
 	}
 
 	@Test(priority = 1, description = "Open Product and Choose Color and Size and Add To Cart")
-	public void openProductAndAddToCart() {
+	public void openProductAndAddToCart() throws InterruptedException {
+
+		boolean expectedMsg = true;
 
 		// Choose Random Product
 		WebElement productItemsContainer = driver.findElement(By.className("product-items"));
@@ -58,23 +63,36 @@ public class CheckoutProccessTest {
 
 			WebElement addCartButton = driver.findElement(By.id("product-addtocart-button"));
 			addCartButton.click();
+
+			// Assertion For Complete Add Product process
+			Thread.sleep(2000);
+			boolean actualMsg = driver
+					.findElement(By.cssSelector("div[data-bind='html: $parent.prepareMessageForHtml(message.text)']"))
+					.getText().contains("You added");
+			Assert.assertEquals(actualMsg, expectedMsg);
+
 		} else {
 			WebElement addCartButton = driver.findElement(By.id("product-addtocart-button"));
 			addCartButton.click();
 		}
 	}
 
-	@Test(priority = 2, description = "Chechout Process...")
+	@Test(priority = 2, description = "Chechout Process...", enabled = true)
 	public void checkoutProccess() throws InterruptedException {
+		
 		Thread.sleep(2000);
 		String checkoutPageURL = "https://magento.softwaretestingboard.com/checkout/cart/";
 		driver.get(checkoutPageURL);
-		
-		Random random = new Random();
 
 		WebElement prooceedButton = driver.findElement(By.cssSelector("button[data-role='proceed-to-checkout']"));
 		prooceedButton.click();
 
+	}
+
+	@Test(priority = 3, description = "Regesteration Process...", enabled = true)
+	public void signUpProcess() throws InterruptedException {
+
+		String expectedMsg = "Thank you for registering with Main Website Store.";
 		Thread.sleep(2000);
 		WebElement email = driver.findElement(By.id("customer-email"));
 		WebElement firstName = driver.findElement(By.name("firstname"));
@@ -86,8 +104,8 @@ public class CheckoutProccessTest {
 		WebElement phoneNumber = driver.findElement(By.name("telephone"));
 
 		Thread.sleep(2000);
-		
-	    int randomEmailNumber = random.nextInt(999);
+
+		int randomEmailNumber = random.nextInt(999);
 
 		email.sendKeys("omar".concat(String.valueOf(randomEmailNumber)).concat("@gmail.com"));
 		firstName.sendKeys("omar");
@@ -145,13 +163,35 @@ public class CheckoutProccessTest {
 		int randomShippingMethod = random.nextInt(shippingMethodList.size());
 		shippingMethodList.get(randomShippingMethod).click();
 		System.out.println("shipping method : " + shippingMethodList.size());
-		
-		//Click On Next Button To Complete Checkout Process
+
+		// Click On Next Button To Complete Checkout Process
 		WebElement nextButton = driver.findElement(By.cssSelector(".button.action.continue.primary"));
 		nextButton.click();
-		
+
 		Thread.sleep(4000);
 		WebElement placeOrderButton = driver.findElement(By.cssSelector(".action.primary.checkout"));
 		placeOrderButton.click();
+
+		Thread.sleep(3000);
+		WebElement createAnAccountButton = driver
+				.findElement(By.cssSelector(".action.primary[data-bind='attr: { href: getUrl() }']"));
+		createAnAccountButton.click();
+
+		Thread.sleep(2000);
+		WebElement passwordInput = driver.findElement(By.id("password"));
+		WebElement rePasswordInput = driver.findElement(By.id("password-confirmation"));
+		passwordInput.sendKeys(password);
+		rePasswordInput.sendKeys(password);
+
+		WebElement createAccountButton = driver.findElement(By.cssSelector("button[title='Create an Account']"));
+		createAccountButton.click();
+
+		// Assertion On Complete SignUp Process
+		Thread.sleep(2000);
+		String ActualMsg = driver
+				.findElement(By.cssSelector("div[data-bind='html: $parent.prepareMessageForHtml(message.text)']"))
+				.getText();
+		Assert.assertEquals(ActualMsg, expectedMsg);
+
 	}
 }

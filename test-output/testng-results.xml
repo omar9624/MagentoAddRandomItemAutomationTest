@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-13T03:11:27 EET" name="Default suite" finished-at="2024-03-13T03:11:55 EET" duration-ms="27682">
+  <suite started-at="2024-03-14T03:56:40 EET" name="Default suite" finished-at="2024-03-14T03:57:24 EET" duration-ms="43814">
     <groups>
     </groups>
-    <test started-at="2024-03-13T03:11:27 EET" name="Default test" finished-at="2024-03-13T03:11:55 EET" duration-ms="27682">
+    <test started-at="2024-03-14T03:56:40 EET" name="Default test" finished-at="2024-03-14T03:57:24 EET" duration-ms="43814">
       <class name="Magento.CheckoutProccessTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Magento.CheckoutProccessTest@674bd420]" started-at="2024-03-13T03:11:27 EET" name="beforeTest" finished-at="2024-03-13T03:11:29 EET" duration-ms="2139" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Magento.CheckoutProccessTest@2b0f373b]" started-at="2024-03-14T03:56:40 EET" name="beforeTest" finished-at="2024-03-14T03:56:42 EET" duration-ms="2185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="openProductAndAddToCart()[pri:1, instance:Magento.CheckoutProccessTest@674bd420]" started-at="2024-03-13T03:11:29 EET" name="openProductAndAddToCart" description="Open Product and Choose Color and Size and Add To Cart" finished-at="2024-03-13T03:11:31 EET" duration-ms="1626" status="PASS">
+        <test-method signature="openProductAndAddToCart()[pri:1, instance:Magento.CheckoutProccessTest@2b0f373b]" started-at="2024-03-14T03:56:42 EET" name="openProductAndAddToCart" description="Open Product and Choose Color and Size and Add To Cart" finished-at="2024-03-14T03:56:46 EET" duration-ms="3676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openProductAndAddToCart -->
-        <test-method signature="checkoutProccess()[pri:2, instance:Magento.CheckoutProccessTest@674bd420]" started-at="2024-03-13T03:11:31 EET" name="checkoutProccess" description="Chechout Process..." finished-at="2024-03-13T03:11:55 EET" duration-ms="23865" status="PASS">
+        <test-method signature="checkoutProccess()[pri:2, instance:Magento.CheckoutProccessTest@2b0f373b]" started-at="2024-03-14T03:56:46 EET" name="checkoutProccess" description="Chechout Process..." finished-at="2024-03-14T03:56:53 EET" duration-ms="7265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutProccess -->
+        <test-method signature="signUpProcess()[pri:3, instance:Magento.CheckoutProccessTest@2b0f373b]" started-at="2024-03-14T03:56:53 EET" name="signUpProcess" description="Regesteration Process..." finished-at="2024-03-14T03:57:24 EET" duration-ms="30639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpProcess -->
       </class> <!-- Magento.CheckoutProccessTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
